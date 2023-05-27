@@ -1,0 +1,38 @@
+@import '../styles/variables'
+  
+.MatrixProcess
+  display: flex
+  justify-content: space-evenly
+  flex-wrap: wrap
+  gap: 10px
+
+.FormulaMatrix
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-content: center
+
+.Process 
+  display: grid
+  grid-template-columns: 35% 1fr
+  grid-gap: 20px
+
+.Box 
+  text-align: center
+  border: 1px solid #c8c8c8
+  border-radius: 20px
+  padding: 20px
+
+.Box:last-child
+  padding-top: 40px
+
+@media (max-width: 767px) 
+  .MatrixProcess
+    display: flex
+    flex-direction: column
+  
+  .Box
+    border: none
+
+  .Process 
+    grid-template-columns: 1fr

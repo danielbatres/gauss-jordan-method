@@ -1,5 +1,12 @@
 @import 'variables'
   
+.MatrixContent
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-content: center
+  flex-wrap: wrap
+
 .MatrixContainer
   min-width: 200px
   max-width: 300px
@@ -13,3 +20,7 @@
   
   .LastColumn
     border-left: 2px dotted $dark
+    text-align: center
+  
+  .Cell 
+    text-align: center

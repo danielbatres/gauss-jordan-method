@@ -4,7 +4,8 @@ import { MathDisplay } from './MathDisplay';
 export const EquationSystem = ({ equations }): JSX.Element => {
   const inlineStyles = {
     fontSize: "1.4rem",
-    padding: "5px"
+    padding: "5px",
+    textAlign: "center"
   }
   
   return (

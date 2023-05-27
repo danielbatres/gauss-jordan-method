@@ -14,19 +14,21 @@ export default function IndexPage() {
   } = useEquations();
   
   return (
-    <div className={styles.container} style={{ backgroundColor: "#F2EDEB" }}>
-      <h1>M&eacute;todo Gauss - Jordan</h1>
-      <div className={styles.content}>
-        {!makeProcess && (
-          <Input
-            equations={equations}
-            setEquations={setEquations}
-            inputEquation={inputEquation}
-            setInputEquation={setInputEquation}
-            makeProcess={makeProcess}
-            setMakeProcess={setMakeProcess}
-          />
-        )}
+    <div className={styles.Container}>
+      <div className={styles.Content}>
+        <div className={styles.Input}>
+          <h1>M&eacute;todo Gauss - Jordan</h1>
+          {!makeProcess && (
+            <Input
+              equations={equations}
+              setEquations={setEquations}
+              inputEquation={inputEquation}
+              setInputEquation={setInputEquation}
+              makeProcess={makeProcess}
+              setMakeProcess={setMakeProcess}
+            />
+          )}
+        </div>
         {makeProcess && (
           <Process makeProcess={makeProcess} equations={equations} />
         )}

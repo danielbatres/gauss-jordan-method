@@ -10,19 +10,20 @@ interface Props {
 export const Matrix: FC<Props> = ({ matrix }): JSX.Element => {
   const inlineStyles = {
     display: "grid",
-    gridTemplateColumns: `repeat(${matrix[0].length}, 1fr)`,
+    gridTemplateColumns: `repeat(${matrix[0].length}, 1fr)`
   };
 
   const [convertedValue] = useFractions();
 
   return (
-    <div className={styles.MatrixContainer} style={inlineStyles}>
+    <div className={styles.MatrixContent}>
+      <div className={styles.MatrixContainer} style={inlineStyles}>
       {matrix.map((vector: number[], rowIndex: number) => {
         return (
           <>
             {vector.map((value: number, colIndex: number) => {
               const isLastColumn = colIndex === matrix[0].length - 1;
-              const className = `${isLastColumn ? styles.LastColumn : ""}`;
+              const className = `${isLastColumn ? styles.LastColumn : styles.Cell}`;
 
               return (
                 <p key={`${rowIndex}-${colIndex}`} className={className}>
@@ -33,6 +34,7 @@ export const Matrix: FC<Props> = ({ matrix }): JSX.Element => {
           </>
         );
       })}
+      </div>
     </div>
   );
 };

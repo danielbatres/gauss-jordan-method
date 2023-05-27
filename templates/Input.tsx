@@ -1,4 +1,3 @@
-import { FC } from 'react';
 import { EquationSystemInput } from '../components/EquationSystemInput';
 import { EquationSystem } from '../components/EquationSystem';
 import styles from '../styles/Input.module.sass'
